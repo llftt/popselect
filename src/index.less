@@ -1,0 +1,104 @@
+:global {
+    .ant-selection-area {
+        display: flex;
+        .ant-selection-item{
+            flex:1 0;
+            margin-right: 16px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+   
+    .popselect-list-item{
+        position: relative;
+        display: block;
+        padding: 5px 12px;
+        overflow: hidden;
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: normal;
+        line-height: 22px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        &.grouped{
+            padding-left: 32px;
+            &.chosen{
+                cursor: default;
+            }
+           
+        }
+        &.selected{
+            .popselect-selected-icon{
+                color: #1890ff;
+            }
+        }
+    }
+
+    .popselect-list-item:hover:not(.popselect-list-item-disabled) {
+        background-color: #e6f7ff;
+    }
+   
+    .popselect-selected-icon{
+        position: absolute;
+        right:4px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+ 
+    .popselect-interset{
+        display: flex;
+        margin-bottom: 12px;
+       .popselect-interset-input{
+           flex:3;
+       }
+       .popselect-interset-btn{
+           margin-left: 10px;
+       }
+    }
+    .popselect-interset-desc{
+        height: 32px;
+        box-sizing: border-box;
+        padding-top: 5px;
+        margin-right: 5px;
+    }
+    .interset-num{
+        color: burlywood;
+    }
+    .popselect-list-container{
+        border: 1px solid #ebedf0;
+        border-radius: 2px;
+        position: relative;
+        padding-top: 8px;
+        .code-box-title{
+            position: absolute;
+            top: -11px;
+            margin-left: 16px;
+            padding: 0px 8px;
+            color: #777;
+            background: #fff;
+            border-radius: 2px 2px 0 0;
+            -webkit-transition: background-color .4s;
+            transition: background-color .4s;
+        }
+    }
+    .popselect-operation{
+        position: absolute;
+        right: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .popselect-operation-icon{
+        color: #1890ff;
+        cursor: pointer;
+        margin-right: 4px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .popselect-holder-inner{
+        will-change: unset !important;
+    }
+}
